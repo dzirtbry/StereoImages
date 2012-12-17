@@ -11,6 +11,10 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 
 /**
+ * Simple frame to show how generator is working.
+ *
+ * Contains main entry point
+ *
  * @author volodymyr.kotyuk
  */
 public class StereoImagesFrame extends JFrame implements ActionListener {
@@ -21,6 +25,21 @@ public class StereoImagesFrame extends JFrame implements ActionListener {
     private JTextField text;
     private JButton button;
     private ImagePanel imagePanel;
+
+
+    static {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+    }
 
     public StereoImagesFrame() throws HeadlessException {
         super("Generate stereo images");

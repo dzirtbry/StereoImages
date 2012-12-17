@@ -40,7 +40,6 @@ public class GeometricImageGenerator implements ImageGenerator {
                     break;
             }
         }
-        System.out.println(Arrays.toString(v));
         return bufferedImage;
     }
 
